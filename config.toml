@@ -1,4 +1,5 @@
-baseurl             = "http://patrickbaylis.com"
+# baseurl             = "http://patrickbaylis.com"
+baseurl             = "https://baylis-travelogue.netlify.com"
 builddrafts         = false
 canonifyurls        = true
 contentdir          = "content"
