@@ -32,3 +32,6 @@ section.main .content .markdown .figure img {
 ```
 
 ![Shrunken image](/img/portugal/IMG_2944.jpg){width=400px}
+
+### Changing Rmd posts
+Remember to run serve site (from Addins toolbar in RStudio), otherwise netlify will serve old HTML file.
