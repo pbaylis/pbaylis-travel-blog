@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+hugoBasicExample
+==========
 
-You can use the [editor on GitHub](https://github.com/pbaylis/pbaylis-travel-blog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is an example site for [Hugo](https://gohugo.io/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It is intended to be a demo site for the various [Hugo themes][].
 
-### Markdown
+# Using
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. First, [install Hugo](https://gohugo.io/overview/installing/);
+2. Then, clone this repository;
+3. Clone the [Hugo themes][];
+4. Run Hugo and select the theme of your choosing.
 
-```markdown
-Syntax highlighted code block
+In other words:
 
-# Header 1
-## Header 2
-### Header 3
+<pre><code>git clone https://github.com/spf13/HugoBasicExample.git
+cd HugoBasicExample
+git clone --recursive https://github.com/spf13/hugoThemes.git themes
+hugo server -t <em>themename</em>
+</code></pre>
 
-- Bulleted
-- List
+Enjoy!
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pbaylis/pbaylis-travel-blog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[Hugo themes]: https://github.com/spf13/hugoThemes

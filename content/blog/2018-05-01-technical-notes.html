@@ -1,0 +1,35 @@
+---
+title: "Technical notes"
+date: 2018-05-01
+---
+
+
+
+<div id="fix-for-image-orientation-problem" class="section level3">
+<h3>Fix for image orientation problem</h3>
+<p>Neither blogdown nor Hugo automatically rotates images according EXIF metadata. The easiest solution I’ve found is to run <code>exiftran -ai *.jpg</code> on the directory of images in the static folder, which autorotates the images per the EXIF orientation flag and then sets it to 1. On Mac, <code>exiftran</code> can be install with <code>brew install exiftran</code>. ### Editing image caption to sit closer to the image I shrunk the distance between the image and the caption and italicized the caption text by including the following in <code>override.css</code></p>
+<pre class="css"><code>div.figure {
+  line-height: 1; 
+}
+
+p.caption {
+  font-style: italic;
+}
+
+section.main .content .markdown .figure img {
+  margin-bottom:0;
+}</code></pre>
+<div class="figure">
+<img src="/img/portugal/IMG_2878.jpg" alt="A Portuguese Guitara" />
+<p class="caption">A Portuguese Guitara</p>
+</div>
+</div>
+<div id="shrinking-images" class="section level3">
+<h3>Shrinking images</h3>
+<p>This code lets me shrink images to smaller than the width of the container they live in.</p>
+<pre class="md"><code>![Shrink images](/img/portugal/IMG_2944.jpg){width=400px}</code></pre>
+<div class="figure">
+<img src="/img/portugal/IMG_2944.jpg" alt="Shrunken image" width="400" />
+<p class="caption">Shrunken image</p>
+</div>
+</div>

@@ -1,0 +1,29 @@
+---
+title: "Alfama day"
+date: 2018-05-04
+---
+
+TODO:
+ 
+- Fix image orientation problem, see [here](https://gohugo.io/about/new-in-032/#image-processing-options)
+- Remove space between image caption and image, and center caption
+  - I haven't figured out how to edit the caption creation part of blogdown.
+  
+I was grateful for my hosts’ noon checkout time requirement, which let me fit a quick run in the Alfama hills. There are a few (actually probably many) sites of note in Alfama, but one of the big draws is that there are some very good lookouts over the city. So my run in the hills turned into a hill workout (with substantial walking). I went up to the Palace of Seu Jorge (but did not go), the National Pantheon of Santa Engracia (which has a stunning vista) and the Miradouro da Senhora do Monte (also a stunning view).
+
+![View over Alfama](/img/portugal/IMG_2903.jpg)
+
+After the run, I came back to my AirBnb where I might Jefe (short for Jefferson), a Brazilian expat who worked for the owner of the AirBNB I stayed him. Jefe was super friendly, and willing to let me leave my bag at the AirBNB for the day while explored. So I did, and explored without bag!  
+
+![Hexagon located!](/img/portugal/IMG_2907.jpg)
+  
+I didn’t wander far at first: went to Pois Cafe, an eclectically decorated restaurant/coffeeshop. I had a great yogurt-oats-fruit breakfast and cappucino, and worked there for a couple hours. Then I walked through the Baixa district (many tourists, many shops) up to Barrio Alto and Chialdo (slightly less touristy, fairly hip). I basically ate my way through town; had an amazing chocolate gelato at Nannerella, then to Copenhagen Coffee Lab for another cafe and a pastry. 
+
+![Nannerella gelato](/img/portugal/IMG_2927.jpg)
+
+Around 6 I started to make my way back to Alfama to pick my bag up and to head towards my new home for the next week and a half or so. I got on a bus towards Campo D’Ourique (where I’m staying with Sam and Emma), but wasn’t paying enough attention and soon ended up back in Alfama. So I got on another bus, paid better attention this time, and transferred. 
+
+![Funicular](/img/portugal/IMG_2944.jpg)
+
+Then I ended up on the non-touristy part of the touristy trolley route which was … sorta fun. Not the most confidence inspiring vehicles, though. Finally, I met Sam at our place - he had just returned from Colombia, but was game to get dinner with me at the Ourique Market, which is a fun indoor market with food stalls (during the day) and restaurants serving food (during the night). There was also a children’s choir there. We got home about 10 and Sam immediately went to bed. I waited for Emma and her friend Hilary to get in late (they were on the Azores islands for a few days) before also heading to sleep… in my bunk bed!    
+
