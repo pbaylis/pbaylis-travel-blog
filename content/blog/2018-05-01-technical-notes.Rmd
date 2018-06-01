@@ -1,16 +1,42 @@
 ---
 title: "Technical notes"
 date: 2018-05-01
+output:
+  blogdown::html_page:
+    toc: true
 ---
 
-### Fix for image orientation problem
-Neither blogdown nor Hugo automatically rotates images according EXIF metadata. The easiest solution I've found is to run `exiftran -ai *.jpg` on the directory of images in the static folder, which autorotates the images per the EXIF orientation flag and then sets it to 1. On Mac, `exiftran` can be install with `brew install exiftran`. 
-### Editing image caption to sit closer to the image
+# How this website works
+
+I built this website using [blogdown](https://bookdown.org/yihui/blogdown/), an [RStudio](https://www.rstudio.com) add-on.^[Actually a part of more recent versions of RStudio.] blogdown actually works as a kind of wrapper or interface to [Hugo](https://gohugo.io), a static site generator^[I previously used Jekyll, another static site generator. However, `blogdown` makes it easy to create websites using `markdown` that can incorporate code, which are useful for doing reproducible research and for teaching.]. I use a stripped down version of the [Cocoa Hugo Theme](https://themes.gohugo.io/theme/cocoa/).
+
+The project code is stored in a Github [repository](http://github.com/pbaylis/travelogue). I can run at test it locally using blogdown, but for serving the site to the outside world I use [netlify.com](https://www.netlify.com)
+
+# Technical notes
+
+## How to get a floating TOC
+
+This turned out to be such a pain in the ass that I gave up. See these links for background reading:
+
+- https://blogdown-demo.rbind.io/2017/09/06/adding-r-markdown-documents-of-other-output-formats/
+- https://stackoverflow.com/questions/48098137/import-stand-alone-rmd-own-repo-and-project-as-a-post-in-blogdown
+
+If I _really_ want a floating TOC I'll just make it as a static file in Rmarkdown and link to it directly.
+For blog posts, the plain on TOC will be fine.
+
+Like, linking to my climate projection [post](/ext_posts/climate_projection_post.html). This actually works pretty well.
+
+## Fix for image orientation problem
+
+Neither blogdown nor Hugo automatically rotates images according EXIF metadata. The easiest solution I've found is to run `exiftran -ai *.jpg` on the directory of images in the static folder, which autorotates the images per the EXIF orientation flag and then sets it to 1. On Mac, `exiftran` can be install with `brew install exiftran`.
+
+## Editing image caption to sit closer to the image
+
   I shrunk the distance between the image and the caption and italicized the caption text by including the following in `override.css`
 
 ```{css, eval = FALSE}
 div.figure {
-  line-height: 1; 
+  line-height: 1;
 }
 
 p.caption {
@@ -22,16 +48,18 @@ section.main .content .markdown .figure img {
 }
 ```
 
-![A Portuguese Guitara](/img/portugal/IMG_2878.jpg)
+<!-- ![A Portuguese Guitara](/img/portugal/IMG_2878.jpg) -->
 
-### Shrinking images
+## Shrinking images
   This code lets me shrink images to smaller than the width of the container they live in.
 
 ```{md, eval = FALSE}
 ![Shrink images](/img/portugal/IMG_2944.jpg){width=400px}
 ```
 
-![Shrunken image](/img/portugal/IMG_2944.jpg){width=400px}
+![Shrunken image](../img/portugal/IMG_2944.jpg){width=400px}
 
-### Changing Rmd posts
+
+
+## Changing Rmd posts
 Remember to run serve site (from Addins toolbar in RStudio), otherwise netlify will serve old HTML file.

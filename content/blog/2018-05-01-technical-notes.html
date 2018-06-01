@@ -1,15 +1,51 @@
 ---
 title: "Technical notes"
 date: 2018-05-01
+output:
+  blogdown::html_page:
+    toc: true
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#how-this-website-works">How this website works</a></li>
+<li><a href="#technical-notes">Technical notes</a><ul>
+<li><a href="#how-to-get-a-floating-toc">How to get a floating TOC</a></li>
+<li><a href="#fix-for-image-orientation-problem">Fix for image orientation problem</a></li>
+<li><a href="#editing-image-caption-to-sit-closer-to-the-image">Editing image caption to sit closer to the image</a></li>
+<li><a href="#shrinking-images">Shrinking images</a></li>
+<li><a href="#changing-rmd-posts">Changing Rmd posts</a></li>
+</ul></li>
+</ul>
+</div>
 
-<div id="fix-for-image-orientation-problem" class="section level3">
-<h3>Fix for image orientation problem</h3>
-<p>Neither blogdown nor Hugo automatically rotates images according EXIF metadata. The easiest solution I’ve found is to run <code>exiftran -ai *.jpg</code> on the directory of images in the static folder, which autorotates the images per the EXIF orientation flag and then sets it to 1. On Mac, <code>exiftran</code> can be install with <code>brew install exiftran</code>. ### Editing image caption to sit closer to the image I shrunk the distance between the image and the caption and italicized the caption text by including the following in <code>override.css</code></p>
+<div id="how-this-website-works" class="section level1">
+<h1>How this website works</h1>
+<p>I built this website using <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>, an <a href="https://www.rstudio.com">RStudio</a> add-on.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> blogdown actually works as a kind of wrapper or interface to <a href="https://gohugo.io">Hugo</a>, a static site generator<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. I use a stripped down version of the <a href="https://themes.gohugo.io/theme/cocoa/">Cocoa Hugo Theme</a>.</p>
+<p>The project code is stored in a Github <a href="http://github.com/pbaylis/travelogue">repository</a>. I can run at test it locally using blogdown, but for serving the site to the outside world I use <a href="https://www.netlify.com">netlify.com</a></p>
+</div>
+<div id="technical-notes" class="section level1">
+<h1>Technical notes</h1>
+<div id="how-to-get-a-floating-toc" class="section level2">
+<h2>How to get a floating TOC</h2>
+<p>This turned out to be such a pain in the ass that I gave up. See these links for background reading:</p>
+<ul>
+<li><a href="https://blogdown-demo.rbind.io/2017/09/06/adding-r-markdown-documents-of-other-output-formats/" class="uri">https://blogdown-demo.rbind.io/2017/09/06/adding-r-markdown-documents-of-other-output-formats/</a></li>
+<li><a href="https://stackoverflow.com/questions/48098137/import-stand-alone-rmd-own-repo-and-project-as-a-post-in-blogdown" class="uri">https://stackoverflow.com/questions/48098137/import-stand-alone-rmd-own-repo-and-project-as-a-post-in-blogdown</a></li>
+</ul>
+<p>If I <em>really</em> want a floating TOC I’ll just make it as a static file in Rmarkdown and link to it directly. For blog posts, the plain on TOC will be fine.</p>
+<p>Like, linking to my climate projection <a href="/ext_posts/climate_projection_post.html">post</a>. This actually works pretty well.</p>
+</div>
+<div id="fix-for-image-orientation-problem" class="section level2">
+<h2>Fix for image orientation problem</h2>
+<p>Neither blogdown nor Hugo automatically rotates images according EXIF metadata. The easiest solution I’ve found is to run <code>exiftran -ai *.jpg</code> on the directory of images in the static folder, which autorotates the images per the EXIF orientation flag and then sets it to 1. On Mac, <code>exiftran</code> can be install with <code>brew install exiftran</code>.</p>
+</div>
+<div id="editing-image-caption-to-sit-closer-to-the-image" class="section level2">
+<h2>Editing image caption to sit closer to the image</h2>
+<p>I shrunk the distance between the image and the caption and italicized the caption text by including the following in <code>override.css</code></p>
 <pre class="css"><code>div.figure {
-  line-height: 1; 
+  line-height: 1;
 }
 
 p.caption {
@@ -19,21 +55,26 @@ p.caption {
 section.main .content .markdown .figure img {
   margin-bottom:0;
 }</code></pre>
-<div class="figure">
-<img src="/img/portugal/IMG_2878.jpg" alt="A Portuguese Guitara" />
-<p class="caption">A Portuguese Guitara</p>
+<!-- ![A Portuguese Guitara](/img/portugal/IMG_2878.jpg) -->
 </div>
-</div>
-<div id="shrinking-images" class="section level3">
-<h3>Shrinking images</h3>
+<div id="shrinking-images" class="section level2">
+<h2>Shrinking images</h2>
 <p>This code lets me shrink images to smaller than the width of the container they live in.</p>
 <pre class="md"><code>![Shrink images](/img/portugal/IMG_2944.jpg){width=400px}</code></pre>
 <div class="figure">
-<img src="/img/portugal/IMG_2944.jpg" alt="Shrunken image" width="400" />
+<img src="../img/portugal/IMG_2944.jpg" alt="Shrunken image" width="400" />
 <p class="caption">Shrunken image</p>
 </div>
 </div>
-<div id="changing-rmd-posts" class="section level3">
-<h3>Changing Rmd posts</h3>
+<div id="changing-rmd-posts" class="section level2">
+<h2>Changing Rmd posts</h2>
 <p>Remember to run serve site (from Addins toolbar in RStudio), otherwise netlify will serve old HTML file.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Actually a part of more recent versions of RStudio.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>I previously used Jekyll, another static site generator. However, <code>blogdown</code> makes it easy to create websites using <code>markdown</code> that can incorporate code, which are useful for doing reproducible research and for teaching.<a href="#fnref2">↩</a></p></li>
+</ol>
 </div>
