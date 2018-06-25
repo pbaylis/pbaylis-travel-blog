@@ -4,6 +4,7 @@ date: 2018-05-01
 output:
   blogdown::html_page:
     toc: true
+tags: [meta]
 ---
 
 # How this website works
