@@ -2,6 +2,7 @@
 title: "Bike ride"
 date: 2018-06-22
 tags: [mayne]
+visible: false
 ---
   
 Slept in today, despite the light blazing in around 6am. Struggled through a workday -- I'm finding that my lofty expectations of my own productivity are mostly going unfulfilled, and thinking about why that is. Am I too distracted? Or missing some compelling push to motivate? It's hard to say. At any rate, I ended up setting relatively modest productivity goals and (mostly) achieving them, though frustratingly most of the actual work time was spent recreating code that I'd essentially already built. 
